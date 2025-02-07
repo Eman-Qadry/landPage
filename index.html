@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+    <header>
+<img class="logo" src="images/logo.svg"alt="logo">
+<nav>
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Courses</a> </li>
+        <li><a href="">Services</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="" class="btn">Sign Up</a></li>
+    </ul>
+    </ul>
+</nav>
+
+
+    </header>
+    <main>
+        <div class="slide-wrapper">
+            <div class="slider pic-1"></div>
+            <div class="slider pic-2"></div>
+            <div class="slider pic-3"></div>
+            <div class="slider pic-4"></div>
+            <div class="slider pic-5"></div>
+
+        </div>
+    </main>
+</div>
+<script>
+    const images=document.querySelectorAll('.slider');
+   
+images[0].classList.add('active');
+    images.forEach(image => {
+        image.addEventListener('click' , addClass);
+    });
+    function addClass($event){
+        removeClass()
+        const target = $event.currentTarget;
+        target.classList.add('active');
+    }
+    function removeClass(){
+        const element=document.querySelector('.active')
+        if (element){
+            element.classList.remove('active');
+        }
+    }
+    
+
+  
+</script>
+
+</body>
+</html>
